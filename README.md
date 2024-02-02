@@ -57,6 +57,8 @@ A Python script for interacting with the Pixela API to create, update, and delet
    
 2. Follow the prompts to interact with the Pixela API, create graphs, add pixels, update values, and delete pixels.
 
+3. When adding a pixel to the graph Pixela will reject 25 percent of all requests. Simply try again
+
 ## Examples
 
 ### Create User

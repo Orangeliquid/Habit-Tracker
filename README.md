@@ -10,7 +10,7 @@ A Python script for interacting with the Pixela API to create, update, and delet
   - [Installation](#installation)
 - [Usage](#usage)
 - [Examples](#examples)
-- [Contributing](#contributing)
+- [Screenshots](#screenshots)
 - [License](#license)
 
 ## Features
@@ -79,6 +79,9 @@ A Python script for interacting with the Pixela API to create, update, and delet
    # response = requests.post(url=pixel_post_endpoint, json=pixel_config, headers=headers)
    # print(response.text)
    ```
+
+## Screenshots
+![Pixela_Example](https://github.com/Orangeliquid/Habit-Tracker/assets/127478612/999ced44-220b-41a5-a870-a5c02ea5acbc)
 
 ## License
 This project is licensed under the [MIT License](LICENSE.txt).

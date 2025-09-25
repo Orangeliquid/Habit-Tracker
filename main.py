@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 import os
+import time
 
 USERNAME = os.environ["USERNAME"]
 TOKEN = os.environ["TOKEN"]
@@ -52,13 +53,21 @@ today = datetime.now()
 # and use the hardcoded date I am looking to POST to pixela
 # Feel free to customize the input("quantity") message to further remember what you are tracking
 pixel_config = {
-    # "date": "20231229",
+    # "date": "20250805",  # Use for time adjustments for past dates - comment out line below to use
     "date": today.strftime("%Y%m%d"),
     "quantity": input("How many minutes did you code today?(floating number): "),
 }
 
-response = requests.post(url=pixel_post_endpoint, json=pixel_config, headers=headers)
-print(response.text)
+while True:
+    response = requests.post(url=pixel_post_endpoint, json=pixel_config, headers=headers)
+    data = response.json()
+    print(data)
+
+    if data.get("isSuccess"):
+        break
+
+    time.sleep(2)
+
 
 # Updating a pixel via PUT
 date_to_change = "20230907"
